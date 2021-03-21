@@ -52,7 +52,6 @@ a{
     .nav-toggle{
         display: none;
     }
-
 }
 
 @media screen and (max-width: 800px){
@@ -62,6 +61,10 @@ a{
         position: absolute;
         font-size: 30px;
         border: none;
+        transition: 1s ease-in-out ;
+    }
+    .nav-toggle:hover{
+        transform: rotate(90deg);
     }
     
     .socialMedia{
@@ -70,7 +73,7 @@ a{
     nav{
         flex-direction: column;
         position: relative;
-        box-shadow:none;
+        box-shadow: none;
     }
     .nav-header{
         width: 100%;
@@ -78,13 +81,28 @@ a{
     .links{
         flex-direction: column;
         width: 100%;
-        background-color: white;
+        overflow: hidden;
+        background-color: #ffffff;
         box-shadow: 0 5px 3px -1px rgba(0,0,0,0.1);
+        transition: 0.3s ease-in-out;
     }
     .links li{
-        margin-left: 40px;
-        height: 40px;
+        padding-left: 40px;
+        height: 0;
         font-size: 17px;
+        transition: 1s ease-in-out;
     }
+    .links li:hover{
+        padding-left: 1rem;
+        background-color: beige;
+    }
+    .show-links{
+        overflow: visible;
+    }
+    .show-links li{
+        height: 40px;
 
+    }
+     
 }
+
