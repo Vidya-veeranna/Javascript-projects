@@ -1,0 +1,83 @@
+body{
+    background-color: aliceblue;
+}
+.nav-toggle{
+        color:rgb(15, 199, 231);
+        font-size: 35px;
+        float: right;
+        margin: 10px;
+        background: none;
+        border: none;
+        transition: 0.5s ease-in-out;
+}
+.nav-toggle:hover,.close:hover{
+    transform: rotate(90deg);
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 400px;
+    height: 100%;
+    background-color: white;
+}
+.sidebar .close{
+    color: red;
+    font-size: 30px;
+    float: right;
+    margin: 20px;
+    background: none;
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+.sidebar img{
+    left:0;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    top: 0;
+}
+ul{
+    list-style: none;
+    padding-inline-start:0;
+}
+a{
+    text-decoration: none;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+.links li{
+    font-size: 20px;
+    padding: 15px;
+    padding-left: 0;
+    transition: 0.5s ease-in-out;
+}
+.links li:hover{
+    background-color:aliceblue;
+    padding-left: 1rem;
+}
+.links li a{
+    color:black;
+    margin-left: 20px;
+}
+
+.socialMedia{
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.socialMedia li a{
+    margin: 10px;
+    color:rgb(15, 199, 231);
+}
+
+.toggleContent{
+    display: none;
+}
