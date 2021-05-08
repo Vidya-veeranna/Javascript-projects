@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Item</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+       h2{
+           text-align: center;
+           font-size: 3rem;
+           margin:20px;
+           margin-bottom: 0;
+       }
+       .underline{
+           width: 100px;
+           height: 3px;
+           background-color: orange;
+           margin: auto;
+           margin-bottom: 20px;
+       }
+       .section-center{
+           display:grid;
+           grid-template-columns: repeat(auto-fit,300px);
+           align-items: center;
+           justify-content: center;
+           grid-gap: 30px;
+          
+       }
+       .image{
+           width:250px;
+           height:250px;
+           border:2px solid orange;
+           border-radius: 5px;
+       }
+       .item-info{
+           width:250px;
+           height:250px;
+       }
+       .header{
+           width:100%;
+           height: 20px;
+           margin-top: 10px;
+           margin-bottom: 10px;
+       }
+        .price{
+          float: right;
+       }
+       .title{
+          float: left;
+          margin-left: 0px;
+       }
+       .underline2{
+           width:100%;
+           height: 2px;
+           background-color:orange;
+           margin-bottom: 10px;
+       }
+       .button-container{
+           width: 100%;
+           margin: 20px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap:20px;
+       }
+       .button-container > .btn{
+           padding: 8px;
+           width: 70px;
+           border: 1px solid orange;
+           border-radius: 10px;
+           color: orange;
+           background-color: white;
+       }
+       .button-container > .btn:hover{
+           color: white;
+           background-color: orange;
+       }
+       
+       @media screen and (min-width: 1502px) {
+        .section-center{
+           grid-template-columns: repeat(2,600px);
+           align-items: center;
+           justify-content: center;
+           grid-gap: 30px; 
+       }
+       .menu-item{
+           width: 600px;
+           height: 300px;
+           display: flex;
+           margin:20px;
+           flex-direction: row;
+           gap: 10px;
+       }
+       }
+    </style>
+</head>
+<body>
+   <section>
+       <h2>Our Menu</h2>
+       <div class="underline"></div>
+       <div class="button-container">
+           <!--button class="btn" data-id = "All" >All</button>
+           <button class="btn" type="button"  data-id="Snacks">Snacks</button>
+           <button class="btn" type="button"  data-id="Lunch">Lunch</button>
+           <button class="btn" type="button"  data-id="Shakes">Shakes</button>
+           <button class="btn" type="button"  data-id="Breakfast">Breakfast</button-->
+       </div>
+       <div class="section-center">
+            <article class="menu-item">
+                <img src="https://www.simplyrecipes.com/wp-content/uploads/2019/01/Butter-Chicken-LEAD-5.jpg" class="image" alt="menu image">
+                <div class="item-info">
+                    <div class="header">
+                    <h4 class="title">Butter chicken</h4>
+                    <h4 class="price">Rs.100</h4>
+                    </div>
+                    <div class="underline2"></div>
+                    <p class="item-text">Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!
+                    </p>
+                </div>
+            </article>
+            
+       </div>
+   </section>
+    <script>
+       const menu = [
+           {
+               id: 1,
+               title: "Butter chicken",
+               price: "Rs.100",
+               category: "Lunch",
+               img: "https://www.simplyrecipes.com/wp-content/uploads/2019/01/Butter-Chicken-LEAD-5.jpg",
+               disc: `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`
+           },
+           {
+               id: 2,
+               title: "Low Crab Milkshake",
+               price: "Rs.50",
+               category: "Shakes",
+               img: "https://www.thelittlepine.com/wp-content/uploads/2018/08/Low-Carb-Shakes-1.jpg",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           },
+           {
+               id: 3,
+               title: "Boozy Summer Mikshake",
+               price: "Rs.70",
+               category: "Shakes",
+               img: "http://southsoundmag.com/wp-content/uploads/2014/08/Snoqualmie-Ice-Cream-Shakes-1.jpg",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           },
+           {
+               id: 4,
+               title: "Masala Dosa",
+               price: "Rs.80",
+               category: "Breakfast",
+               img: "http://curlytales.com/wp-content/uploads/2017/07/South-Indian-Breakfast-770x515.jpg",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           },
+           {
+               id: 5,
+               title: "Edli Vada",
+               price: "Rs.60",
+               category: "Breakfast",
+               img: "https://www.archanaskitchen.com/images/archanaskitchen/0-Affiliate-Articles/RESTAURANT_STYLE_SOUTH_INDIAN_THALI_original.jpg",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           }, 
+           {
+               id: 6,
+               title: "Chicken Korma",
+               price: "Rs.150",
+               category: "Dinner",
+               img: "https://tse3.mm.bing.net/th?id=OIP.vSN_DyvKXit2d5gficcGDAHaHa&pid=Api&P=0&w=300&h=300",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           },
+           {
+               id: 7,
+               title: "French Fries",
+               price: "Rs.50",
+               category: "Snacks",
+               img: "https://tse2.mm.bing.net/th?id=OIP.Ia5C_IoBKVQka9xA9ukXbwHaHa&pid=Api&P=0&w=300&h=300",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           },
+           {
+               id: 8,
+               title: "Chicken Grevy",
+               price: "Rs.200",
+               category: "Dinner",
+               img: "https://tse3.mm.bing.net/th?id=OIP.3gm3d0zZk0AhgEpS56Y_CgHaE8&pid=Api&P=0&w=258&h=173",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           },
+           {
+               id: 9,
+               title: "Samosa",
+               price: "Rs.60",
+               category: "Snacks",
+               img: "https://tse4.mm.bing.net/th?id=OIP.Ru2tkoiGd9AtjTE8R7fmPQHaEL&pid=Api&P=0&w=270&h=153",
+               disc:  `Lorem ipsum, dolor sit amet
+                     consectetur adipisicing elit. Earum eaque harum, 
+                     autem ducimus fugiat vitae cum cumque maiores iusto
+                      asperiores!`,
+           }
+       ];
+       const sectionCenter = document.querySelector(".section-center");
+       const btnContainer = document.querySelector(".button-container");
+      
+       window.addEventListener("DOMContentLoaded",function(){
+           MenuDisplay(menu);
+           DisplayBtns();
+       });
+      
+       
+       function MenuDisplay(menuitems){
+        let DisplayMenu = menuitems.map(function(item){
+               return `<article class="menu-item">
+                <img src=${item.img} class="image" alt="menu image">
+                <div class="item-info">
+                    <div class="header">
+                    <h4 class="title">${item.title}</h4>
+                    <h4 class="price">${item.price}</h4>
+                    </div>
+                    <div class="underline2"></div>
+                    <p class="item-text">${item.disc}
+                    </p>
+                    <a href="open.html" target="_blank" onclick='myfun(item)'>Click here</a>
+                </div>
+            </article>`
+           })
+           DisplayMenu = DisplayMenu.join("");
+
+           sectionCenter.innerHTML = DisplayMenu;
+       }
+
+       function DisplayBtns(){
+
+        const categories = menu.reduce(function(values,item){
+               if(!values.includes(item.category)){
+                   values.push(item.category);
+               }
+               return values;
+           },["All"]);
+
+           const catbtn = categories.map(function(categories){
+               return `<button class="btn" type="button"  data-id=${categories}>${categories}</button>`;
+           }).join("");
+           btnContainer.innerHTML = catbtn;
+
+          const btns = document.querySelectorAll(".btn");
+          btns.forEach(function(btn){
+              btn.addEventListener("click",function(e){
+                  const category = e.currentTarget.dataset.id;
+                  const menuCategory = menu.filter(function(menuItem){
+                      if(menuItem.category === category){
+                          return menuItem;
+                      }
+                  });
+                  if(category === "all"){
+                      DisplayMenu(menu)
+                  }else{
+                      DisplayMenu(menuCategory)
+                  }
+              });
+          });
+       }
+    </script>
+</body>
+</html>
