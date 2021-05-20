@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #container{
+            width: 500px;
+            height: 600px;
+            background-color: black;
+            border-radius: 20px;
+        }
+        #display{
+            width: 90%;
+            height: 100px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 20px;
+            font-size: 2rem;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .btn-container{
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px; 
+            justify-items: center; 
+        }
+        button{
+            width: 70px;
+            height: 70px;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <input type="text" id="display" />
+        <div class="btn-container">
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('*')">X</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="solve()">=</button>
+            <button onclick="clr()">clear</button>
+        </div>
+    </section>
+    <script>
+        function display(val){
+            document.getElementById("display").value +=val;
+        }
+        function solve(){
+            let x = document.getElementById("display").value;
+            let y = eval(x);
+            document.getElementById("display").value = y;
+        }
+        function clr(){
+             document.getElementById("display").value = "";
+        }
+    </script>
+</body>
+</html>
